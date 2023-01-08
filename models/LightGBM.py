@@ -4,8 +4,8 @@ import lightgbm as lgb
 
 class LightGBM(BaseModel):
     def __init__(self, opt):
-        # self.model = LGBMRegressor(**opt)
-        self.model = lgb.LGBMRegressor()
+        self.model = lgb.LGBMRegressor(**opt)
+        # self.model = lgb.LGBMRegressor()
     def fit(self, X, y):
         self.model.fit(X, y)
 
